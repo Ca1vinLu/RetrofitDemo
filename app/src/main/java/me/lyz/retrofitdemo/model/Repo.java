@@ -1,4 +1,4 @@
-package me.lyz.retrofitdemo;
+package me.lyz.retrofitdemo.model;
 
 /**
  * GitHub仓库实体
