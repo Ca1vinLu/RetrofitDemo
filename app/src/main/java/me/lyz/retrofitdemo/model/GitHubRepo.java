@@ -5,7 +5,7 @@ package me.lyz.retrofitdemo.model;
  *
  * @author LYZ 2018.10.29
  */
-public class Repo {
+public class GitHubRepo {
 
     public int id;
     public String node_id;
@@ -102,7 +102,7 @@ public class Repo {
 
     @Override
     public String toString() {
-        return "Repo{" +
+        return "GitHubRepo{" +
                 "id=" + id +
                 ", node_id='" + node_id + '\'' +
                 ", name='" + name + '\'' +

@@ -2,7 +2,7 @@ package me.lyz.retrofitdemo.service;
 
 import java.util.List;
 
-import me.lyz.retrofitdemo.model.Repo;
+import me.lyz.retrofitdemo.model.GitHubRepo;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -13,5 +13,5 @@ import retrofit2.http.Path;
 public interface GitHubService {
 
     @GET("users/{user}/repos")
-    Call<List<Repo>> getGitHubRepos(@Path("user") String user);
+    Call<List<GitHubRepo>> getGitHubRepos(@Path("user") String user);
 }

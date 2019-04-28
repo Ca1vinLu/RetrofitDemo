@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import me.lyz.retrofitdemo.model.Repo;
+import me.lyz.retrofitdemo.model.GitHubRepo;
 import me.lyz.retrofitdemo.network.RetrofitUtils;
 import me.lyz.retrofitdemo.service.GitHubService;
 import retrofit2.Call;
@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
         GitHubService service = RetrofitUtils.getRetrofit().create(GitHubService.class);
         service.getGitHubRepos("CalvinLv")
-                .enqueue(new Callback<List<Repo>>() {
+                .enqueue(new Callback<List<GitHubRepo>>() {
                     @Override
-                    public void onResponse(Call<List<Repo>> call, Response<List<Repo>> response) {
+                    public void onResponse(Call<List<GitHubRepo>> call, Response<List<GitHubRepo>> response) {
                         StringBuilder stringBuilder = new StringBuilder();
                         if (response.body() != null) {
-                            for (Repo repo : response.body()) {
+                            for (GitHubRepo repo : response.body()) {
                                 stringBuilder.append(repo.toString()).append("\n\n");
                             }
                         }
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onFailure(Call<List<Repo>> call, Throwable t) {
+                    public void onFailure(Call<List<GitHubRepo>> call, Throwable t) {
 
                     }
                 });

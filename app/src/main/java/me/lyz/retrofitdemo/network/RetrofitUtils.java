@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * @description:
+ * @description: Retrofit工具类
  * @author: luyuzheng
  * @date: 2019-04-25 18:00
  */
